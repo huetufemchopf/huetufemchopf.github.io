@@ -1,0 +1,207 @@
+/*IMPORTS*/
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('./assets/fonts/Inconsolata-Regular.woff2') format('woff2'), url('./assets/fonts/Inconsolata-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata SemiExpanded';
+    src: url('./assets/fonts/InconsolataSemiExpanded-Regular.woff2') format('woff2'), url('./assets/fonts/InconsolataSemiExpanded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Neue Montreal Regular";
+    src: url("./assets/fonts/NeueMontreal-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neue Montreal Italic";
+    src: url("./assets/fonts/NeueMontreal-Italic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neue Montreal Bold";
+    src: url("./assets/fonts/NeueMontreal-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neue Montreal Light";
+    src: url("./assets/fonts/NeueMontreal-Light.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neue Montreal Light Italic";
+    src: url("./assets/fonts/NeueMontreal-LightItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Neue Montreal Bold Italic";
+    src: url("./assets/fonts/NeueMontreal-BoldItalic.woff") format("woff");
+}
+
+
+/* HEADINGS */
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.05;
+}
+
+h1 {
+    font-size: $huge;
+    font-family: $nmr;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    overflow: hidden;
+    color: $lightest;
+    & span {
+        display: inline-block;
+    }
+    /* @mixin atSmall {
+        color: $lightest;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+    } */
+}
+
+h2 {
+    font-size: $big;
+    font-family: $nmr;
+    color: $light;
+    letter-spacing: 0.7rem;
+}
+
+h3 {
+    font-size: $mid;
+    font-family: $nml;
+    letter-spacing: 0.35rem;
+}
+
+h4 {
+    font-size: $text;
+    font-family: $nmli;
+    letter-spacing: 0.3rem;
+}
+
+h5 {
+    font-size: $small;
+    font-family: $nmi;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-family: $nml;
+    letter-spacing: 0.1rem;
+    font-size: $tiny;
+    text-transform: uppercase;
+}
+
+
+/* TEXT */
+
+p,
+a,
+li {
+    font-size: $text;
+    letter-spacing: .08rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* SPANS */
+
+.uc {
+    text-transform: uppercase;
+}
+
+#swap:hover {
+    background: $yellow;
+}
+
+.red {
+    color: $red;
+}
+
+.yellow {
+    background: $yellow;
+    color: $red;
+}
+
+.bold {
+    font-family: $nmb;
+    text-decoration: overline;
+    &:hover {
+        background: $yellow;
+    }
+}
+
+.overline {
+    text-decoration: overline;
+    &:hover {
+        color: $darkest;
+        background: $yellow;
+    }
+}
+
+.lh2 {
+    line-height: 2;
+}
+
+.inverse {
+    background: $lightest;
+    color: $darkest;
+}
+
+.italic {
+    font-family: $nmi;
+    color: $light;
+}
+
+.hili {
+    position: relative;
+    &:after {
+        background: $light;
+        color: $light;
+        bottom: 10%;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: transform 0.7s;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: right center;
+    }
+    &:hover:after {
+        transform: scaleX(1);
+        transform-origin: left center;
+    }
+}
+
+.prot {
+    display: none;
+}
+
+.scroll-down {
+    font-size: $mid;
+    font-family: nmb;
+}

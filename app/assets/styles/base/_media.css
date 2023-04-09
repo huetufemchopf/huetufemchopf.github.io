@@ -1,0 +1,22 @@
+img,
+video {
+    opacity: 0;
+    width: 100%;
+}
+
+svg {
+    width: $svg;
+    height: $svg;
+    margin-right: 2.4rem;
+    @mixin atSmall {
+        margin-right: 4.8rem;
+    }
+}
+
+svg:not(#insta):hover {
+    fill: $red;
+}
+
+svg#insta:hover {
+    stroke: $red;
+}
